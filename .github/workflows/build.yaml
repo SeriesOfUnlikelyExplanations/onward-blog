@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     name: Build and deploy
@@ -22,9 +22,17 @@ jobs:
           npm test
 
       - name: serverless deploy
-        uses: serverless/github-action@master
+        uses: serverless/github-action@main
         with:
           args: deploy
+        env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: hexo deploy
+        run: |
+          hexo generate
+          hexo deploy
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

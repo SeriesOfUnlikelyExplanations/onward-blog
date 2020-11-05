@@ -1,4 +1,4 @@
-service: onward
+service: onward-blog
 provider:
   name: aws
   runtime: nodejs12.x
@@ -8,19 +8,14 @@ provider:
     serverless:servess: ${self:service}
 
 plugins:
-  - serverless-offline
-  - serverless-s3-sync
   - serverless-cloudfront-invalidate
 
 custom:
   hostedZoneName: always-onward.com
-  siteName: www.always-onward.com
+  siteName: blog.always-onward.com
   hostedZoneId: Z2FDTNDATAQYW2 # cloudfront
   DNSName: s3-website-us-east-1.amazonaws.com
   stage: ${opt:stage, 'prod'}
-  s3Sync:
-  - bucketName: ${self:custom.siteName}
-    localDir: static
   cloudfrontInvalidate:
     distributionIdKey: CloudFrontDistributionId
     items:
@@ -118,54 +113,6 @@ resources:
         Name: ${self:custom.siteName}.
         Type: 'A'
 
-    CognitoUserPool:
-      Type: "AWS::Cognito::UserPool"
-      Properties:
-        MfaConfiguration: OFF
-        UserPoolName: onwardUsers
-        UsernameAttributes:
-          - email
-        Policies:
-          PasswordPolicy:
-            MinimumLength: 6
-            RequireLowercase: False
-            RequireNumbers: True
-            RequireSymbols: False
-            RequireUppercase: True
-
-    CognitoUserPoolClient:
-      Type: "AWS::Cognito::UserPoolClient"
-      Properties:
-        ClientName: Onward Tools
-        AllowedOAuthFlowsUserPoolClient: true
-        SupportedIdentityProviders: [
-          "COGNITO",
-          "Google",
-          "LoginWithAmazon"
-        ]
-        CallbackURLs: [
-          "http://localhost:3000",
-          "https://rental.always-onward.com",
-          "https://www.always-onward.com"
-        ]
-        LogoutURLs: [
-          "http://localhost:3000",
-          "https://www.always-onward.com"
-        ]
-        AllowedOAuthFlows: [
-          "implicit"
-        ]
-        AllowedOAuthScopes: [
-          "phone",
-          "openid",
-          "email",
-          "aws.cognito.signin.user.admin",
-          "profile"
-        ]
-        GenerateSecret: False
-        UserPoolId:
-          Ref: CognitoUserPool
-
   Outputs:
     StaticSiteS3BucketName:
       Value:
@@ -175,13 +122,6 @@ resources:
         Fn::GetAtt:
           - CloudFrontDistribution
           - DomainName
-    CognitoUserPoolArn:
-      Value:
-        Fn::GetAtt:
-          - CognitoUserPool
-          - Arn
-      Export:
-        Name: CognitoUserPoolArn-${self:custom.stage}
     CloudFrontDistributionId:
       Description: Api Distirbution Id
       Value:
