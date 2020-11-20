@@ -2,10 +2,9 @@
   "name": "hexo-site",
   "version": "0.0.0",
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
+    "new": "hexo new draft",
     "deploy": "hexo deploy",
-    "server": "hexo server",
+    "serve": "hexo server --draft",
     "test": "echo suceeded"
   },
   "hexo": {
@@ -19,10 +18,10 @@
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-marked": "^3.3.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
-    "serverless": "^2.10.0"
+    "serverless": "^2.12.0"
   },
   "devDependencies": {
     "serverless-cloudfront-invalidate": "^1.5.0"

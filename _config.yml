@@ -41,7 +41,14 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+
+# this makes images work
+post_asset_folder: true
+marked:
+  gfm: true
+  prependRoot: true
+  postAsset: true
+
 relative_link: false
 future: true
 highlight:
