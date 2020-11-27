@@ -1,5 +1,6 @@
 ---
 title: Welcome to my Blog
+date: 2020-11-15 13:35:39
 ---
 
 Welcome to the Always Onward blog. This blog is mostly going to be for me to cronicle my families adventures so that my daughter can read about all the fun we had - but also to share them with the world! Primarily, our adventures will include van travel (mostly weekend trips) and at some point, a full time sailing trip. So - here we are at the end of 2020, I am planning to buy my van in the next couple of weeks and a boat in the next 3-4 years. It will be fun to look back 3 years from now to see how much fun stuff we have done!
