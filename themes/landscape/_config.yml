@@ -9,13 +9,19 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: right
+sidebar: left
 widgets:
+- about
 - category
 - tag
 - tagcloud
 - archive
 - recent_posts
+
+#about Sidebar
+nickname: The Woodard Family
+description: "**Welcome to Adventure!** <br> Just another blog about the adventures of a small family traveling by land (van) and by sea (boat)."
+avatar: /images/family.jpg
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -28,7 +34,7 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: G-TG1ZH6PWKD
 gauges_analytics:
 favicon: /favicon.png
 twitter:
