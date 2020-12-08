@@ -22,7 +22,7 @@
     "hexo-renderer-marked": "^3.3.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
-    "serverless": "^2.12.0"
+    "serverless": "^2.15.0"
   },
   "devDependencies": {
     "serverless-cloudfront-invalidate": "^1.5.0"
