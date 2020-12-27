@@ -43,7 +43,7 @@ filename_case: 0
 render_drafts: false
 
 # this makes images work
-post_asset_folder: true
+post_asset_folder: false
 marked:
   gfm: true
   prependRoot: true
