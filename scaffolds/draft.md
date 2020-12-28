@@ -6,5 +6,5 @@ tags:
 
 ![](/images/two_backpacks.jpg)
 
-{% youtube WxfZkMm3wcg %}
+
 

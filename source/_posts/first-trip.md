@@ -14,6 +14,10 @@ One good win was having a campchair for sara to sit on in the van. This helped m
 
 ![](sara-eating-in-van.jpg)
 
+After camping, we went on a ski tour up the ridge and back. Very scenic and Sara had a good time - We even got to stop on the ridge for a bit and enjoy the snow.
+
+<iframe src='https://www.gaiagps.com/public/GOwJ4SHSkvz564MaTHutpA1P?embed=True' style='border:none; overflow-y: hidden; background-color:white; min-width: 320px; max-width:420px; width:100%; height: 420px;' scrolling='no' seamless='seamless'></iframe>
+
 Here are some other pictures from the trip:
 
 ![](sara-in-backpack.jpg)

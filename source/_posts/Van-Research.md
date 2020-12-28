@@ -6,7 +6,7 @@ tags:
 
 ### Spoiler Alert!
 I picked the Chrysler Pasifica.
-![](/images/generic_chrysler_pasifica_with_box.jpg)
+![](generic_chrysler_pasifica_with_box.jpg)
 
 
 Why you might ask? Great question. That's what this blog post seeks to answer. Two primary reasons and a handful of secondary (nice to have) reasons. I'll start with the standard pro/con analysis. Let me start off with my requirements
