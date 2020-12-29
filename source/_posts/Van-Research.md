@@ -1,7 +1,7 @@
 ---
 title: Van Research
 date: 2020-11-20 13:35:39
-tags:
+tags: VanTrip
 ---
 
 ### Spoiler Alert!

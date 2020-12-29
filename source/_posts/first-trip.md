@@ -1,6 +1,6 @@
 ---
 title: First Van Trip
-tags: 'van_trip,'
+tags: VanTrip
 date: 2020-12-23 13:35:39
 ---
 
