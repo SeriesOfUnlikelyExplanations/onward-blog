@@ -1,7 +1,7 @@
 ---
-title: leadbetter-dissapointment-millersvania
+title: Leadbetter State Park, then Cape Dissapointment, then Millersvania state park.... whew!
 date: 2021-01-19 06:31:29
-tags:
+tags: VanTrip
 ---
 
 
