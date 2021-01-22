@@ -17,9 +17,9 @@ custom:
   DNSName: s3-website-us-east-1.amazonaws.com
   stage: ${opt:stage, 'prod'}
   cloudfrontInvalidate:
-    distributionIdKey: CloudFrontDistributionId
-    items:
-      - "/*"
+    - distributionIdKey: CloudFrontDistributionId
+      items:
+        - "/*"
 
 resources:
   Resources:
