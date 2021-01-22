@@ -15,10 +15,10 @@
     "publish": "hexo publish"
   },
   "hexo": {
-    "version": "5.2.0"
+    "version": "5.3.0"
   },
   "dependencies": {
-    "hexo": "^5.0.0",
+    "hexo": "^5.3.0",
     "hexo-deployer-aws-s3": "^1.0.2",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
@@ -29,10 +29,10 @@
     "hexo-renderer-marked": "^3.3.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
-    "serverless": "^2.15.0",
-    "highlight.js": "^10.4.1"
+    "highlight.js": "^10.5.0",
+    "serverless": "^2.20.0"
   },
   "devDependencies": {
-    "serverless-cloudfront-invalidate": "^1.5.0"
+    "serverless-cloudfront-invalidate": "^1.7.0"
   }
 }
