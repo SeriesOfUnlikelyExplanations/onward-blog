@@ -9,15 +9,17 @@
   },
   "scripts": {
     "new": "hexo new draft",
-    "deploy": "hexo deploy",
+    "hexo-deploy": "hexo deploy",
+    "cdk-deploy": "cdk deploy --require-approval never",
     "serve": "hexo server --draft",
     "test": "echo suceeded",
-    "publish": "hexo publish"
+    "publish": "hexo publish",
+    "preinstall": "npx npm-force-resolutions"
   },
   "hexo": {
     "version": "5.3.0"
   },
-  "dependencies": {
+  "devDependencies": {
     "hexo": "^5.3.0",
     "hexo-deployer-aws-s3": "^1.0.2",
     "hexo-generator-archive": "^1.0.0",
@@ -30,9 +32,20 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "highlight.js": "^10.5.0",
-    "serverless": "^2.20.1"
+    "@aws-cdk/assert": "1.87.1",
+    "@types/node": "10.17.27",
+    "aws-cdk": "1.87.1",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7",
+    "@aws-cdk/aws-cloudfront": "^1.87.1",
+    "@aws-cdk/aws-route53-targets": "^1.87.1",
+    "@aws-cdk/aws-s3-deployment": "^1.87.1",
+    "@aws-cdk/core": "1.87.1",
+    "source-map-support": "^0.5.16",
+    "@mobileposse/auto-delete-bucket": "^1.55.0",
+    "live-server": "^1.2.1"
   },
-  "devDependencies": {
-    "serverless-cloudfront-invalidate": "^1.7.0"
+  "resolutions": {
+    "axios": "^0.21.1"
   }
 }

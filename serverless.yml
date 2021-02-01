@@ -92,11 +92,6 @@ resources:
           ViewerCertificate:
             AcmCertificateArn: arn:aws:acm:us-east-1:718523126320:certificate/a9162037-75f4-4b4f-89dc-185e84007de6
             SslSupportMethod: sni-only
-          ## Uncomment the following section in case you want to enable logging for CloudFront requests
-          # Logging:
-          #  IncludeCookies: 'false'
-          #   Bucket: mylogs.s3.amazonaws.com
-          #   Prefix: myprefix
       DependsOn:
         - StaticSiteS3BucketPolicy
 

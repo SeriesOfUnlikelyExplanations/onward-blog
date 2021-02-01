@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  build:
+ build:
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:
@@ -21,18 +21,10 @@ jobs:
           npm install
           npm test
 
-      - name: serverless deploy
-        uses: serverless/github-action@master
-        with:
-          args: deploy
-        env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: hexo deploy
+      - name: Deploy
         run: |
-          npx hexo generate
-          npx hexo deploy
+          npm run cdk-deploy
+          npm run hexo-deploy
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
