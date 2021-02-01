@@ -1,0 +1,825 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "OnwardBlogStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "OnwardBlogStack.template.json"
+      },
+      "metadata": {
+        "/OnwardBlogStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1",
+              "id": "392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1",
+              "packaging": "zip",
+              "sourceHash": "392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1",
+              "s3BucketParameter": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36",
+              "s3KeyParameter": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD",
+              "artifactHashParameter": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1ArtifactHashDFF16A18"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68.zip",
+              "id": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "packaging": "file",
+              "sourceHash": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "s3BucketParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+              "s3KeyParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+              "artifactHashParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:181:29)",
+              "new AwsCliLayer (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "id": "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "packaging": "zip",
+              "sourceHash": "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "s3BucketParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C",
+              "s3KeyParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70",
+              "artifactHashParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfArtifactHash85F58E48"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/blog.always-onward.com-website/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "blogalwaysonwardcomwebsiteDE60208D",
+            "trace": [
+              "new Bucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1326:22)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:12:5)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/blog.always-onward.com-website/AutoBucket/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "blogalwaysonwardcomwebsiteAutoBucketA13BB5B5",
+            "trace": [
+              "new CustomResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/custom-resource.ts:119:21)",
+              "new CustomResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-cloudformation/lib/custom-resource.ts:165:5)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:31:5)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/blog.always-onward.com-website/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "blogalwaysonwardcomwebsitePolicyF1BECA4A",
+            "trace": [
+              "new BucketPolicy (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:42:21)",
+              "AutoDeleteBucket.addToResourcePolicy (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:488:21)",
+              "Function.addToPrincipalOrResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:45)",
+              "AutoDeleteBucket.grant (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:726:27)",
+              "AutoDeleteBucket.grantRead (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:585:17)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:29:18)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB",
+            "trace": [
+              "new Role (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C",
+            "trace": [
+              "new Policy (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "AutoDeleteBucket.grant (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:726:27)",
+              "AutoDeleteBucket.grantReadWrite (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:650:17)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:29:10)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70DC15ED41",
+            "trace": [
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:614:35)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1ArtifactHashDFF16A18",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new AutoDeleteBucket (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@mobileposse/auto-delete-bucket/src/resource/auto-delete-bucket.ts:17:20)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:19:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:181:29)",
+              "new AwsCliLayer (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:181:29)",
+              "new AwsCliLayer (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:181:29)",
+              "new AwsCliLayer (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfArtifactHash85F58E48",
+            "trace": [
+              "new FileAssetParameters (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "OnwardBlogStack.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/OIA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OIAE39B2685",
+            "trace": [
+              "new OriginAccessIdentity (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-cloudfront/lib/origin_access_identity.ts:112:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:26:17)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/blog.always-onward.com-cfront/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "blogalwaysonwardcomcfrontCFDistribution659B7295",
+            "trace": [
+              "new CloudFrontWebDistribution (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-cloudfront/lib/web_distribution.ts:919:26)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:31:26)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/blog.always-onward.comDeployWebsite/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "blogalwaysonwardcomDeployWebsiteAwsCliLayerBB822404",
+            "trace": [
+              "new LayerVersion (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:189:39)",
+              "new AwsCliLayer (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+            "trace": [
+              "new Role (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+            "trace": [
+              "new Function (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/function.ts:614:35)",
+              "SingletonFunction.ensureLambda (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new OnwardBlogStack (/mnt/c/users/woodardt/workspace/onward-blog/lib/onward-blog-stack.ts:47:5)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/bin/onward-blog.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:417:26)",
+              "process.emit (events.js:310:20)",
+              "process.EventEmitter.emit (domain.js:482:12)",
+              "process.emit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:137:15)"
+            ]
+          }
+        ],
+        "/OnwardBlogStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:417:26)",
+              "process.emit (events.js:310:20)",
+              "process.EventEmitter.emit (domain.js:482:12)",
+              "process.emit (/mnt/c/users/woodardt/workspace/onward-blog/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:137:15)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

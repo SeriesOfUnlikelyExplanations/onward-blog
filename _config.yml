@@ -109,10 +109,7 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: aws-s3
-  bucket: blog.always-onward.com
-  region: us-east-1
+#~ deploy:
 
 feed:
   enable: true
