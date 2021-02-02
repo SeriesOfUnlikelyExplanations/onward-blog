@@ -45,7 +45,7 @@ export class OnwardBlogStack extends cdk.Stack {
     });
 
     new BucketDeployment(this, siteName + 'DeployWebsite', {
-      sources: [Source.asset(websiteDistSourcePath)],
+      sources: [],
       destinationBucket: sourceBucket,
       distribution,
       distributionPaths: ['/*'],
