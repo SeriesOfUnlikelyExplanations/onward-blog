@@ -44,13 +44,6 @@ export class OnwardBlogStack extends cdk.Stack {
       }
     });
 
-    new BucketDeployment(this, siteName + 'DeployWebsite', {
-      sources: [],
-      destinationBucket: sourceBucket,
-      distribution,
-      distributionPaths: ['/*'],
-    });
-
     const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, siteName + '-hosted-zone', {
       hostedZoneId,
       zoneName,
@@ -61,5 +54,13 @@ export class OnwardBlogStack extends cdk.Stack {
       zone: myHostedZone,
       recordName: siteName,
     });
+    new cdk.CfnOutput(this, "distID", {
+      exportName: "distID",
+      value: distribution.distributionId
+     });
+     new cdk.CfnOutput(this, "bucketName", {
+      exportName: "bucketName",
+      value: sourceBucket.bucketName
+     });
   }
 }

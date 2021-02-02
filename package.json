@@ -10,9 +10,10 @@
   "scripts": {
     "new": "hexo new draft",
     "hexo-deploy": "hexo deploy",
-    "cdk-deploy": "cdk deploy --require-approval never",
-    "s3-deploy": "aws s3 sync public s3://blog.always-onward.com"
-    "deploy": "npm run hexo-deploy && npm run cdk-deploy && npm run s3-deploy",
+    "cdk-deploy": "cdk deploy --require-approval never --outputs-file output.json",
+    "s3-deploy": "aws s3 sync public s3://`jq -r '.OnwardBlogStack.bucketName' output.json`",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
+    "deploy": "npm run hexo-deploy && npm run cdk-deploy && npm run s3-deploy && npm run invalidate",
     "serve": "hexo server --draft",
     "test": "echo suceeded",
     "publish": "hexo publish",
