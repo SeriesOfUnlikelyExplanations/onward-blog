@@ -7,7 +7,7 @@ import targets = require('@aws-cdk/aws-route53-targets');
 import { AutoDeleteBucket } from '@mobileposse/auto-delete-bucket'
 
 const websiteDistSourcePath = './public';
-const certificateArn = 'arn:aws:acm:us-east-1:718523126320:certificate/a9162037-75f4-4b4f-89dc-185e84007de6';
+const certificateArn = 'arn:aws:acm:us-east-1:718523126320:certificate/759a286c-c57f-44b4-a40f-4c864a8ab447';
 const hostedZoneId = 'Z0092175EW0ABPS51GQB';
 const siteName = 'blog.always-onward.com';
 const zoneName = 'always-onward.com';
