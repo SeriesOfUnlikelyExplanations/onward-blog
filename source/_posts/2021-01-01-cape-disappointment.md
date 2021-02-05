@@ -1,7 +1,7 @@
 ---
 title: Cape Disappointment - Van Trip 2
 date: 2021-01-01 06:56:20
-tags: VanTrip
+tags: VanTrip SouthernWashington
 ---
 
 

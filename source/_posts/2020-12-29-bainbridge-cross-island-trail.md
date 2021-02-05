@@ -1,6 +1,6 @@
 ---
 title: Bainbridge Cross Island Trail
-tags: DayHike
+tags: DayHike, OlympicPeninsula
 date: 2020-12-29 06:10:51
 ---
 
