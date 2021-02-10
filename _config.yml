@@ -124,3 +124,14 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+# Configuration for hexo-image-sizes
+responsive_images:
+  pattern: '**/*.+(png|jpg|jpeg)'
+  sizes:
+    small:
+      width: 800
+      fit: inside
+    large:
+      width: 2000
+      withoutEnlargement: true

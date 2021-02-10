@@ -8,7 +8,8 @@ We decided to do a day hike on Bainbridge Island and the trail was super cool so
 
 Here are some of the fun landmarks along the way:
 
-![](stacked-stones.jpg)
+{% fancybox stacked-stones.jpg [small_old-outhouse.jpg] Stacked Stones %}
+
 Stacked stones about half way. People just seemed to want to stack stones on this big rock for people to come and see. Some of them were quite high.
 
 ![](old-outhouse.jpg)
