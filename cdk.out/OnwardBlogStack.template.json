@@ -20,25 +20,6 @@
         "aws:cdk:path": "OnwardBlogStack/blog.always-onward.com-website/Resource"
       }
     },
-    "blogalwaysonwardcomwebsiteAutoBucketA13BB5B5": {
-      "Type": "Custom::AutoDeleteBucket",
-      "Properties": {
-        "ServiceToken": {
-          "Fn::GetAtt": [
-            "AutoBucket7677dc81117d41c0b75bdb11cb84bb70DC15ED41",
-            "Arn"
-          ]
-        },
-        "BucketName": {
-          "Ref": "blogalwaysonwardcomwebsiteDE60208D"
-        }
-      },
-      "UpdateReplacePolicy": "Delete",
-      "DeletionPolicy": "Delete",
-      "Metadata": {
-        "aws:cdk:path": "OnwardBlogStack/blog.always-onward.com-website/AutoBucket/Default"
-      }
-    },
     "blogalwaysonwardcomwebsitePolicyF1BECA4A": {
       "Type": "AWS::S3::BucketPolicy",
       "Properties": {
@@ -91,153 +72,6 @@
       },
       "Metadata": {
         "aws:cdk:path": "OnwardBlogStack/blog.always-onward.com-website/Policy/Resource"
-      }
-    },
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Statement": [
-            {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": {
-                "Service": "lambda.amazonaws.com"
-              }
-            }
-          ],
-          "Version": "2012-10-17"
-        },
-        "ManagedPolicyArns": [
-          {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-              ]
-            ]
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/ServiceRole/Resource"
-      }
-    },
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C": {
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyDocument": {
-          "Statement": [
-            {
-              "Action": [
-                "s3:GetObject*",
-                "s3:GetBucket*",
-                "s3:List*",
-                "s3:DeleteObject*",
-                "s3:PutObject",
-                "s3:Abort*"
-              ],
-              "Effect": "Allow",
-              "Resource": [
-                {
-                  "Fn::GetAtt": [
-                    "blogalwaysonwardcomwebsiteDE60208D",
-                    "Arn"
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      {
-                        "Fn::GetAtt": [
-                          "blogalwaysonwardcomwebsiteDE60208D",
-                          "Arn"
-                        ]
-                      },
-                      "/*"
-                    ]
-                  ]
-                }
-              ]
-            }
-          ],
-          "Version": "2012-10-17"
-        },
-        "PolicyName": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C",
-        "Roles": [
-          {
-            "Ref": "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/ServiceRole/DefaultPolicy/Resource"
-      }
-    },
-    "AutoBucket7677dc81117d41c0b75bdb11cb84bb70DC15ED41": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "S3Bucket": {
-            "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36"
-          },
-          "S3Key": {
-            "Fn::Join": [
-              "",
-              [
-                {
-                  "Fn::Select": [
-                    0,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Fn::Select": [
-                    1,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            ]
-          }
-        },
-        "Role": {
-          "Fn::GetAtt": [
-            "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB",
-            "Arn"
-          ]
-        },
-        "Handler": "main.handler",
-        "Runtime": "nodejs10.x",
-        "Timeout": 900
-      },
-      "DependsOn": [
-        "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRoleDefaultPolicy57248D6C",
-        "AutoBucket7677dc81117d41c0b75bdb11cb84bb70ServiceRole2F2A10DB"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "OnwardBlogStack/AutoBucket7677dc81117d41c0b75bdb11cb84bb70/Resource",
-        "aws:asset:path": "asset.392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1",
-        "aws:asset:property": "Code"
       }
     },
     "OIAE39B2685": {
@@ -309,7 +143,7 @@
           ],
           "PriceClass": "PriceClass_100",
           "ViewerCertificate": {
-            "AcmCertificateArn": "arn:aws:acm:us-east-1:718523126320:certificate/a9162037-75f4-4b4f-89dc-185e84007de6",
+            "AcmCertificateArn": "arn:aws:acm:us-east-1:718523126320:certificate/759a286c-c57f-44b4-a40f-4c864a8ab447",
             "SslSupportMethod": "sni-only"
           }
         }
@@ -349,26 +183,11 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Modules": "aws-cdk=1.87.1,@aws-cdk/assets=1.87.1,@aws-cdk/aws-applicationautoscaling=1.87.1,@aws-cdk/aws-autoscaling-common=1.87.1,@aws-cdk/aws-certificatemanager=1.87.1,@aws-cdk/aws-cloudformation=1.87.1,@aws-cdk/aws-cloudfront=1.87.1,@aws-cdk/aws-cloudwatch=1.87.1,@aws-cdk/aws-codeguruprofiler=1.87.1,@aws-cdk/aws-ec2=1.87.1,@aws-cdk/aws-ecr=1.87.1,@aws-cdk/aws-ecr-assets=1.87.1,@aws-cdk/aws-events=1.87.1,@aws-cdk/aws-iam=1.87.1,@aws-cdk/aws-kms=1.87.1,@aws-cdk/aws-lambda=1.87.1,@aws-cdk/aws-logs=1.87.1,@aws-cdk/aws-route53=1.87.1,@aws-cdk/aws-route53-targets=1.87.1,@aws-cdk/aws-s3=1.87.1,@aws-cdk/aws-s3-assets=1.87.1,@aws-cdk/aws-sqs=1.87.1,@aws-cdk/aws-ssm=1.87.1,@aws-cdk/cloud-assembly-schema=1.87.1,@aws-cdk/core=1.87.1,@aws-cdk/custom-resources=1.87.1,@aws-cdk/cx-api=1.87.1,@aws-cdk/region-info=1.87.1,jsii-runtime=node.js/v12.16.3"
+        "Modules": "aws-cdk=1.89.0,@aws-cdk/assets=1.89.0,@aws-cdk/aws-applicationautoscaling=1.89.0,@aws-cdk/aws-autoscaling-common=1.89.0,@aws-cdk/aws-certificatemanager=1.89.0,@aws-cdk/aws-cloudfront=1.89.0,@aws-cdk/aws-cloudwatch=1.89.0,@aws-cdk/aws-codeguruprofiler=1.89.0,@aws-cdk/aws-ec2=1.89.0,@aws-cdk/aws-ecr=1.89.0,@aws-cdk/aws-ecr-assets=1.89.0,@aws-cdk/aws-events=1.89.0,@aws-cdk/aws-iam=1.89.0,@aws-cdk/aws-kms=1.89.0,@aws-cdk/aws-lambda=1.89.0,@aws-cdk/aws-logs=1.89.0,@aws-cdk/aws-route53=1.89.0,@aws-cdk/aws-route53-targets=1.89.0,@aws-cdk/aws-s3=1.89.0,@aws-cdk/aws-s3-assets=1.89.0,@aws-cdk/aws-sqs=1.89.0,@aws-cdk/aws-ssm=1.89.0,@aws-cdk/cloud-assembly-schema=1.89.0,@aws-cdk/core=1.89.0,@aws-cdk/custom-resources=1.89.0,@aws-cdk/cx-api=1.89.0,@aws-cdk/region-info=1.89.0,jsii-runtime=node.js/v12.16.3"
       },
       "Metadata": {
         "aws:cdk:path": "OnwardBlogStack/CDKMetadata/Default"
-      },
-      "Condition": "CDKMetadataAvailable"
-    }
-  },
-  "Parameters": {
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3BucketC0082D36": {
-      "Type": "String",
-      "Description": "S3 bucket for asset \"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\""
-    },
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1S3VersionKey929B15CD": {
-      "Type": "String",
-      "Description": "S3 key for asset version \"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\""
-    },
-    "AssetParameters392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1ArtifactHashDFF16A18": {
-      "Type": "String",
-      "Description": "Artifact hash for asset \"392e2627a26f124347194605f96c8ed33d4552afcc2339b700ce6d6ce351eac1\""
+      }
     }
   },
   "Mappings": {
@@ -397,180 +216,6 @@
       "Export": {
         "Name": "bucketName"
       }
-    }
-  },
-  "Conditions": {
-    "CDKMetadataAvailable": {
-      "Fn::Or": [
-        {
-          "Fn::Or": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-northeast-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-northeast-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-southeast-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-southeast-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ca-central-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "cn-north-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "cn-northwest-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-central-1"
-              ]
-            }
-          ]
-        },
-        {
-          "Fn::Or": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-north-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-3"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "me-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "sa-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-east-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-west-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-west-2"
-              ]
-            }
-          ]
-        }
-      ]
     }
   }
 }

@@ -4,8 +4,6 @@ import { Bucket, BlockPublicAccess } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import route53 = require('@aws-cdk/aws-route53');
 import targets = require('@aws-cdk/aws-route53-targets');
-import { AutoDeleteBucket } from '@mobileposse/auto-delete-bucket'
-
 const websiteDistSourcePath = './public';
 const certificateArn = 'arn:aws:acm:us-east-1:718523126320:certificate/759a286c-c57f-44b4-a40f-4c864a8ab447';
 const hostedZoneId = 'Z0092175EW0ABPS51GQB';
@@ -16,7 +14,7 @@ export class OnwardBlogStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const sourceBucket = new AutoDeleteBucket(this, siteName + '-website', {
+    const sourceBucket = new Bucket(this, siteName + '-website', {
       websiteIndexDocument: 'index.html',
       bucketName: siteName,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
