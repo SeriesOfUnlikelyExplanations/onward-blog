@@ -26,6 +26,7 @@
     "@aws-cdk/assert": "^1.55.0",
     "@aws-cdk/aws-cloudfront": "^1.55.0",
     "@aws-cdk/aws-route53-targets": "^1.55.0",
+    "@aws-cdk/aws-s3": "^1.55.0",
     "@aws-cdk/aws-s3-deployment": "^1.55.0",
     "@aws-cdk/core": "^1.55.0",
     "@mobileposse/auto-delete-bucket": "^1.55.0",
@@ -44,15 +45,12 @@
     "hexo-server": "^2.0.0",
     "highlight.js": "^10.6.0",
     "live-server": "^1.2.1",
+    "npm-force-resolutions": "^0.0.3",
     "source-map-support": "^0.5.16",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.8"
   },
   "resolutions": {
     "axios": "^0.21.1"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "npm-force-resolutions": "^0.0.3"
   }
 }
