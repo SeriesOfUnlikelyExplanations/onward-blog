@@ -1,5 +1,5 @@
 import cdk = require('@aws-cdk/core');
-import { CloudFrontWebDistribution, OriginAccessIdentity } from '@aws-cdk/aws-cloudfront'
+import { CloudFrontWebDistribution, OriginAccessIdentity, OriginProtocolPolicy } from '@aws-cdk/aws-cloudfront'
 import { Bucket, BlockPublicAccess } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import route53 = require('@aws-cdk/aws-route53');
