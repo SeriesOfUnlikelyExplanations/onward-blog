@@ -8,11 +8,12 @@ We decided to do a day hike on Bainbridge Island and the trail was super cool so
 
 Here are some of the fun landmarks along the way:
 
-{% fancybox stacked-stones.jpg [small_old-outhouse.jpg] Stacked Stones %}
+![Stones](stacked-stones.jpg)
 
 Stacked stones about half way. People just seemed to want to stack stones on this big rock for people to come and see. Some of them were quite high.
 
-![](old-outhouse.jpg)
+![Outhouse](old-outhouse.jpg)
+
 This was an old outhouse along the trail. Not in use anymore, but the roof was super cool with the moss growing off of it. Graffiti was kinda gross, but fun to see otherwise.
 
 And the route:
@@ -22,8 +23,8 @@ I forgot to start my tracker until 1.5 mi in, so the track above isn't complete.
 
 Here are some pictures of us on the trail.
 
-![](sara-sleeping.jpg)
+![Sleeping](sara-sleeping.jpg)
 
-![](sara-with-fruit-roll.jpg)
+![Fruit Rollup](sara-with-fruit-roll.jpg)
 
-![](sara-finished.jpg)
+![Finished!](sara-finished.jpg)

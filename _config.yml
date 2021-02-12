@@ -132,6 +132,3 @@ responsive_images:
     small:
       width: 800
       fit: inside
-    large:
-      width: 2000
-      withoutEnlargement: true
