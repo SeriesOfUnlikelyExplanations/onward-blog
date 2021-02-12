@@ -18,20 +18,21 @@ export class OnwardBlogStack extends cdk.Stack {
       websiteIndexDocument: 'index.html',
       bucketName: siteName,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
-      blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
+      publicReadAccess: true,
+      //~ blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
     });
 
-    const oia = new OriginAccessIdentity(this, 'OIA', {
-      comment: "Created by CDK"
-    });
-    sourceBucket.grantRead(oia);
+    //~ const oia = new OriginAccessIdentity(this, 'OIA', {
+      //~ comment: "Created by CDK"
+    //~ });
+    //~ sourceBucket.grantRead(oia);
 
     const distribution = new CloudFrontWebDistribution(this, siteName + '-cfront', {
       originConfigs: [
         {
           s3OriginSource: {
             s3BucketSource: sourceBucket,
-            originAccessIdentity: oia
+            //~ originAccessIdentity: oia
           },
           behaviors : [ {isDefaultBehavior: true}]
         }
