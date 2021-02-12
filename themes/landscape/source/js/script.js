@@ -94,7 +94,7 @@
 
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
-      $(this).wrap('<a class="fancybox" href="' + this.src + '" data-fancybox="gallery" data-caption="' + alt + '"></a>')
+      $(this).wrap('<a href="' + this.src + '" data-fancybox="gallery" data-caption="' + alt + '"></a>')
 
       var dotIndex = this.src.lastIndexOf("/");
       if (dotIndex != -1) this.src = this.src.substring(0, dotIndex+1) + 'small_' + this.src.substring(dotIndex+1)
