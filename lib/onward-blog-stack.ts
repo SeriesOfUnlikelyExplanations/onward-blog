@@ -30,9 +30,13 @@ export class OnwardBlogStack extends cdk.Stack {
     const distribution = new CloudFrontWebDistribution(this, siteName + '-cfront', {
       originConfigs: [
         {
-          s3OriginSource: {
-            s3BucketSource: sourceBucket,
+          //~ s3OriginSource: {
+            //~ s3BucketSource: sourceBucket,
             //~ originAccessIdentity: oia
+          //~ },
+          customOriginSource: {
+            domainName: sourceBucket.bucketWebsiteDomainName,
+            originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
           },
           behaviors : [ {isDefaultBehavior: true}]
         }
