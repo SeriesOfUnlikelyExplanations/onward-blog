@@ -1,7 +1,9 @@
 ---
 title: First trip to the North Cascades - snowy adventure!
 date: 2021-02-01 17:30:49
-tags: VanTrip NorthCascades
+tags:
+ - VanTrip
+ - NorthCascades
 ---
 
 Our latest trip was up to the North cascades National Park - which was an amazing place, far more than I expected this time of year. It's a national park, but they allow dogs to hike on trails and they don't really have an entrance/exit. The place we went hiking was about 3 miles from the end of the road (where the close the north cascades highway for the winter) and right after the big dam/lakes in that area.
