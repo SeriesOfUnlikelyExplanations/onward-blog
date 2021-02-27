@@ -4,9 +4,6 @@ tags: home
 date: 2021-02-14 13:43:30
 ---
 
-![](/images/two_backpacks.jpg)
-
-
 So - we were planning to go on a van trip this weekend, but woke up on Thursday morning to this:
 
 ![Morning Snow!](morning1.jpg)
