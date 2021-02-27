@@ -4,12 +4,12 @@
 
 # Site
 title: Always Onward Blog
-subtitle: ''
-description: ''
+subtitle: 'Onward Blog'
+description: 'Blog about Adventure - big and small'
 keywords:
 author: Tom Woodard
 language: en
-timezone: ''
+timezone: 'America/Los_Angeles'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
