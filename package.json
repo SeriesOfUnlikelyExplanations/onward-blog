@@ -20,7 +20,7 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "hexo": {
-    "version": "5.3.0"
+    "version": "5.4.0"
   },
   "dependencies": {
     "@aws-cdk/assert": "^1.87.0",
