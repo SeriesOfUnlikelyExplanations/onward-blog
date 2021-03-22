@@ -5,11 +5,6 @@ tags:
 date: 2021-03-01 06:05:08
 ---
 
-![Two Backpacks](/images/two_backpacks.jpg)
-
-{% youtube e-6noWr4f6A %}
-
-
 ![Deception Pass Hike](hiking4.jpg)
 
 Our first Van trip as a family - and our first trip with a working battery... :) This was also our first trip with our new inflatable Kayak, which was **super** fun. Sara and I left early Saturday and got a campsite, bought some groceries, and went on a hike around the south side of deception pass. The hike had some amazing views and we were able to get some play time on the beach as well. Almost a 3 mile hike and Sara did about half of it on her own.
