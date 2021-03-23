@@ -5,11 +5,6 @@ tags:
 date: 2021-02-26 13:34:42
 ---
 
-![Two Backpacks](/images/two_backpacks.jpg)
-
-{% youtube e-6noWr4f6A %}
-
-
 So I decided to try to find something on the Olympic peninsula for this trip. I found an interesting camp near lake cushman with some trails nearby that looked like fun. Lake Cushman is a beautiful area with some amazing day sites right along the beach. Here are some pictures of the lake
 
 ![The Lake](lake1.jpg)
