@@ -8,7 +8,7 @@
     "url": "git@github.com:SeriesOfUnlikelyExplanations/onward-blog.git"
   },
   "scripts": {
-    "new": "hexo new draft",
+    "new": "hexo new",
     "hexo-deploy": "hexo deploy",
     "cdk-deploy": "cdk deploy --require-approval never --outputs-file output.json",
     "s3-deploy": "aws s3 sync public s3://`jq -r '.OnwardBlogStack.bucketName' output.json`",
@@ -29,14 +29,14 @@
     "@aws-cdk/aws-s3": "^1.87.0",
     "@aws-cdk/aws-s3-deployment": "^1.87.0",
     "@aws-cdk/core": "^1.87.0",
-    "@aws-cdk/yaml-cfn": "^1.89.0",
+    "@aws-cdk/yaml-cfn": "^1.87.0",
     "@types/node": "^10.17.27",
     "aws-cdk": "^1.87.0",
     "aws-sdk": "^2.841.0",
-    "cdk-assets": "^1.89.0",
+    "cdk-assets": "^1.87.0",
     "fs-extra": "^9.1.0",
     "hexo": "^5.4.0",
-    "hexo-filter-responsive-images": "^1.6.0",
+    "hexo-filter-responsive-images": "git://github.com/SeriesOfUnlikelyExplanations/hexo-filter-responsive-images.git",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",
@@ -55,6 +55,7 @@
     "typescript": "^3.9.8"
   },
   "resolutions": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "marked": "^1.2.9"
   }
 }
