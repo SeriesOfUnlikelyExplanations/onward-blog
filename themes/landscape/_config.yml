@@ -12,7 +12,8 @@ fancybox: true
 sidebar: left
 widgets:
 - about
-- category
+- pages
+#~ - category
 - tag
 - tagcloud
 - archive
@@ -22,6 +23,11 @@ widgets:
 nickname: The Woodard Family
 description: "**Welcome to Adventure!** <br> Just another blog about the adventures of a small family traveling by land (van) and by sea (boat)."
 avatar: /images/family.jpg
+
+#pages Sidebar
+pages:
+- Sara-Quotes
+- Campsite-Reviews
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

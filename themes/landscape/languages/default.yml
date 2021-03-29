@@ -9,6 +9,7 @@ comment: Comments
 archive_a: Archives
 archive_b: "Archives: %s"
 page: Page %d
+pages: Pages
 recent_posts: Recent Posts
 newer: Newer
 older: Older
