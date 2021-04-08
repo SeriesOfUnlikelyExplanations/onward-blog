@@ -18,3 +18,9 @@ date: 2021-03-25 05:15:26
 7. "Why can't we steal things from people when they need them?"
 
 8. "I just felt a stinky smell" after tooting in the tubby
+
+9. "Daddy - You make the bestest food ever!"
+
+10. "Daddy, the salt water went up my bum bum"
+
+11. Regular chanting - "Cheko, cheko" - "Sara, what does cheko mean?" said Tom - "Cheko means to poop on something." said Sara
