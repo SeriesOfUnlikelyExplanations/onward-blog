@@ -81,7 +81,7 @@ There was a little trail that went up and over the island - pretty steap but it 
 
 ![View from the Top](view_from_the_top.jpg)
 
-![View from the Top](view_from_the_top2.jpg)
+![View from the Top](view_from_top2.jpg)
 
 And finally - selfie from the top of the island before we headed back and drove home.
 
