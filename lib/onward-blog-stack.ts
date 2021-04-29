@@ -2,6 +2,7 @@ import cdk = require('@aws-cdk/core');
 import { CloudFrontWebDistribution, OriginAccessIdentity, OriginProtocolPolicy } from '@aws-cdk/aws-cloudfront'
 import { Bucket, BlockPublicAccess } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
+import * as lambda from '@aws-cdk/aws-lambda';
 import route53 = require('@aws-cdk/aws-route53');
 import targets = require('@aws-cdk/aws-route53-targets');
 const websiteDistSourcePath = './public';
@@ -13,27 +14,17 @@ const zoneName = 'always-onward.com';
 export class OnwardBlogStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-
+    //Create the website bucket
     const sourceBucket = new Bucket(this, siteName + '-website', {
       websiteIndexDocument: 'index.html',
       bucketName: siteName,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       publicReadAccess: true,
-      //~ blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
     });
-
-    //~ const oia = new OriginAccessIdentity(this, 'OIA', {
-      //~ comment: "Created by CDK"
-    //~ });
-    //~ sourceBucket.grantRead(oia);
-
+    //Create the cloudfront distribution to cache the bucket
     const distribution = new CloudFrontWebDistribution(this, siteName + '-cfront', {
       originConfigs: [
         {
-          //~ s3OriginSource: {
-            //~ s3BucketSource: sourceBucket,
-            //~ originAccessIdentity: oia
-          //~ },
           customOriginSource: {
             domainName: sourceBucket.bucketWebsiteDomainName,
             originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
@@ -46,6 +37,23 @@ export class OnwardBlogStack extends cdk.Stack {
         names: [siteName]
       }
     });
+
+    // Create the lambda for all of the backend support
+    const handler = new lambda.Function(this, 'onwardBlogLambda', {
+      functionName: `onwardBlogLambda`,
+      code: lambda.Code.fromAsset('lambda'),
+      handler: 'index.event_handler',
+      memorySize: 512,
+      timeout: cdk.Duration.seconds(120),
+      runtime: lambda.Runtime.NODEJS_10_X,
+      retryAttempts: 0
+    });
+    //Let Lambda send email
+    //~ handler.addToRolePolicy(new iam.PolicyStatement({
+      //~ resources: ['arn:aws:ses:us-east-1:732956247431:identity/dash-reporting@amazon.com'],
+      //~ actions: ['ses:SendEmail', 'ses:SendRawEmail'],
+    //~ }))
+
 
     const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, siteName + '-hosted-zone', {
       hostedZoneId,
@@ -65,5 +73,8 @@ export class OnwardBlogStack extends cdk.Stack {
       exportName: "bucketName",
       value: sourceBucket.bucketName
      });
+
+
+
   }
 }

@@ -46,6 +46,7 @@
     "hexo-renderer-marked": "^4.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
+    "hexo-image-tools": "git://github.com/SeriesOfUnlikelyExplanations/hexo-image-tools.git",
     "highlight.js": "^10.6.0",
     "live-server": "^1.2.1",
     "npm-force-resolutions": "^0.0.3",
