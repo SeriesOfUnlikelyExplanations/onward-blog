@@ -46,7 +46,7 @@ export class OnwardBlogStack extends cdk.Stack {
       handler: 'index.event_handler',
       memorySize: 512,
       timeout: cdk.Duration.seconds(120),
-      runtime: lambda.Runtime.NODEJS_10_X,
+      runtime: lambda.Runtime.NODEJS_14_X,
       retryAttempts: 0
     });
     //Let Lambda send email
