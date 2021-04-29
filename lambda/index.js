@@ -1,4 +1,7 @@
-exports.handler = async function(event) {
+
+
+
+const handler = async (event, context) => {
   console.log("request:", JSON.stringify(event, undefined, 2));
   return {
     statusCode: 200,
@@ -8,3 +11,15 @@ exports.handler = async function(event) {
 };
 
 
+const deployHandler = async (event, context) => {
+  console.log("request:", JSON.stringify(event, undefined, 2));
+  return {
+    statusCode: 200,
+    headers: { "Content-Type": "text/plain" },
+    body: `Hello, CDK! You've hit ${event.path}\n`
+  };
+};
+
+
+exports.handler = (event, context, callback) =>
+  (event.source === 'aws.events' ? deployHandler : handler)(event, context, callback);

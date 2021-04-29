@@ -15,7 +15,7 @@
     "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
     "deploy": "npm run hexo-deploy && npm run cdk-deploy && npm run s3-deploy && npm run invalidate",
     "serve": "hexo generate && hexo server --draft",
-    "test": "echo suceeded",
+    "test": "tsc",
     "publish": "hexo publish",
     "preinstall": "npx npm-force-resolutions"
   },

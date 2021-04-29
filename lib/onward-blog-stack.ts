@@ -6,6 +6,7 @@ import lambda = require('@aws-cdk/aws-lambda');
 import iam = require('@aws-cdk/aws-iam');
 import route53 = require('@aws-cdk/aws-route53');
 import targets = require('@aws-cdk/aws-route53-targets');
+import { AwsCustomResource, PhysicalResourceId, AwsCustomResourcePolicy } from '@aws-cdk/custom-resources';
 
 const certificateArn = 'arn:aws:acm:us-east-1:718523126320:certificate/759a286c-c57f-44b4-a40f-4c864a8ab447';
 const hostedZoneId = 'Z0092175EW0ABPS51GQB';
@@ -54,7 +55,44 @@ export class OnwardBlogStack extends cdk.Stack {
       resources: ['arn:aws:ses:us-west-2:718523126320:identity/woodard.thomas@gmail.com'],
       actions: ['ses:SendEmail', 'ses:SendRawEmail'],
     }))
+    // Create the s3 trigger
+    const rsrc = new AwsCustomResource(this, 'S3NotificationResource', {
+      policy: AwsCustomResourcePolicy.fromStatements([new iam.PolicyStatement({
+        actions: ["S3:PutBucketNotification"],
+        resources: [sourceBucket.bucketArn],
+      })]),
+      onCreate: {
+        service: 'S3',
+        action: 'putBucketNotificationConfiguration',
+        parameters: {
+          // This bucket must be in the same region you are deploying to
+          Bucket: sourceBucket.bucketName,
+          NotificationConfiguration: {
+            LambdaFunctionConfigurations: [
+              {
+                Events: ['s3:ObjectCreated:*'],
+                LambdaFunctionArn: handler.functionArn,
+                Filter: {
+                  Key: {
+                    FilterRules: [{ Name: 'suffix', Value: 'html' }]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        // Always update physical ID so function gets executed
+        physicalResourceId: PhysicalResourceId.of('S3NotifCustomResource' + Date.now().toString())
+      }
+    });
 
+    handler.addPermission('AllowS3Invocation', {
+      action: 'lambda:InvokeFunction',
+      principal: new iam.ServicePrincipal('s3.amazonaws.com'),
+      sourceArn: sourceBucket.bucketArn
+    });
+
+    rsrc.node.addDependency(handler.permissionsNode.findChild('AllowS3Invocation'));
 
     const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, siteName + '-hosted-zone', {
       hostedZoneId,
