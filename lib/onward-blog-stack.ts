@@ -2,10 +2,11 @@ import cdk = require('@aws-cdk/core');
 import { CloudFrontWebDistribution, OriginAccessIdentity, OriginProtocolPolicy } from '@aws-cdk/aws-cloudfront'
 import { Bucket, BlockPublicAccess } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
-import * as lambda from '@aws-cdk/aws-lambda';
+import lambda = require('@aws-cdk/aws-lambda');
+import iam = require('@aws-cdk/aws-iam');
 import route53 = require('@aws-cdk/aws-route53');
 import targets = require('@aws-cdk/aws-route53-targets');
-const websiteDistSourcePath = './public';
+
 const certificateArn = 'arn:aws:acm:us-east-1:718523126320:certificate/759a286c-c57f-44b4-a40f-4c864a8ab447';
 const hostedZoneId = 'Z0092175EW0ABPS51GQB';
 const siteName = 'blog.always-onward.com';
@@ -49,10 +50,10 @@ export class OnwardBlogStack extends cdk.Stack {
       retryAttempts: 0
     });
     //Let Lambda send email
-    //~ handler.addToRolePolicy(new iam.PolicyStatement({
-      //~ resources: ['arn:aws:ses:us-east-1:732956247431:identity/dash-reporting@amazon.com'],
-      //~ actions: ['ses:SendEmail', 'ses:SendRawEmail'],
-    //~ }))
+    handler.addToRolePolicy(new iam.PolicyStatement({
+      resources: ['arn:aws:ses:us-west-2:718523126320:identity/woodard.thomas@gmail.com'],
+      actions: ['ses:SendEmail', 'ses:SendRawEmail'],
+    }))
 
 
     const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, siteName + '-hosted-zone', {
