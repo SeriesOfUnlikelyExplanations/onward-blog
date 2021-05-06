@@ -19,6 +19,9 @@
         <% } %>
       </nav>
       <nav id="sub-nav">
+        <% if (theme.rssemail){ %>
+          <a id="nav-email-link" class="nav-icon" href="<%- url_for(theme.rssemail) %> <%- full_url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+        <% } %>
         <% if (theme.rss){ %>
           <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
         <% } %>

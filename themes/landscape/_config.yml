@@ -3,6 +3,7 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
+rssemail: https://feedrabbit.com/?url=
 
 # Content
 excerpt_link: Read More
