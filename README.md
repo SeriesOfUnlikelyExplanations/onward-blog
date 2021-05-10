@@ -12,4 +12,6 @@ TODO:
 - fix it so you can serve images from draft folder
 - Auto upload videos to youtube on hexo generate
 
-Powered by [Hexo](https://hexo.io/docs/)
+
+    "hexo-image-tools": "git://github.com/SeriesOfUnlikelyExplanations/hexo-image-tools.git",
+
