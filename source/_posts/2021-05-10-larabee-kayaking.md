@@ -53,8 +53,6 @@ After a quick break for lunch, we headed back out for another paddle - closer to
 
 ![Kayaking](kayaking6.jpg)
 
-
-
 By the end of the paddle, someone was very tuckered out... :)
 
 ![Sleeping on the Kayak](sara_napping.jpg)
