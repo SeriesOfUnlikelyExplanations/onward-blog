@@ -24,3 +24,7 @@ date: 2021-03-25 05:15:26
 10. "Daddy, the salt water went up my bum bum"
 
 11. Regular chanting - "Cheko, cheko" - "Sara, what does cheko mean?" said Tom - "Cheko means to poop on something." said Sara
+
+12. "We don't walk around with cats on our heads!"
+
+13.
