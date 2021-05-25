@@ -27,4 +27,4 @@ date: 2021-03-25 05:15:26
 
 12. "We don't walk around with cats on our heads!"
 
-13.
+13. "I would be very sad if you showed my butt to everyone"
