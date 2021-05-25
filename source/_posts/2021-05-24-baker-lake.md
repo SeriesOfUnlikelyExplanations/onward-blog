@@ -1,10 +1,12 @@
 ---
-title: baker-lake
+title: Baker Lake
 tags:
   - VanTrip
-date: 2021-05-24 15:56:50
+date: 2021-05-22 15:56:50
 ---
 
-![Two Backpacks](/images/two_backpacks.jpg)
+![Beautiful Camp](beautiful-camp1.jpg)
+
+![Beautiful Camp](beautiful-camp2.jpg)
 
 {% youtube e-6noWr4f6A %}
