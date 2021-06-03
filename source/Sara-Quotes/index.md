@@ -28,3 +28,5 @@ date: 2021-03-25 05:15:26
 12. "We don't walk around with cats on our heads!"
 
 13. "I would be very sad if you showed my butt to everyone"
+
+14. "My wiggles are not coming out of my ears, they are coming out of my body"

@@ -130,5 +130,5 @@ responsive_images:
   pattern: '**/*.+(png|jpg|jpeg)'
   sizes:
     small:
-      width: 400
+      width: 200
       fit: inside
