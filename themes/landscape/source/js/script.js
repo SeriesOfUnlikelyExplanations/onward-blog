@@ -89,12 +89,13 @@
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
+      if ($(this).hasClass('panzoom__content')) return
 
       var alt = this.alt;
 
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
-      $(this).wrap('<a href="' + this.src + '" data-fancybox="gallery" data-caption="' + alt + '"></a>')
+      $(this).wrap('<a href="' + this.src + '" data-fancybox="iframe" data-caption="' + alt + '"></a>')
 
       var dotIndex = this.src.lastIndexOf("/");
       if (dotIndex != -1) this.src = this.src.substring(0, dotIndex+1) + 'small_' + this.src.substring(dotIndex+1)
@@ -137,4 +138,33 @@
 
     $container.removeClass('mobile-nav-on');
   });
+  const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+    Dots: false,
+    on: {
+      createSlide: (carousel, slide) => {
+        slide.Panzoom = new Panzoom(slide.$el.querySelector(".panzoom"), {
+          panOnlyZoomed: true,
+        });
+      },
+      deleteSlide: (carousel, slide) => {
+        if (slide.Panzoom) {
+          slide.Panzoom.destroy();
+
+          slide.Panzoom = null;
+        }
+      },
+    },
+  });
+
+  const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+    Sync: {
+      with: mainCarousel,
+      friction: 0,
+    },
+    Dots: false,
+    Navigation: false,
+    center: true,
+    infinite: false,
+  });
+
 })(jQuery);
