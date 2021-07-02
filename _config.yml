@@ -132,3 +132,6 @@ responsive_images:
     small:
       width: 400
       fit: inside
+    tiny:
+      width: 100
+      fit: inside
