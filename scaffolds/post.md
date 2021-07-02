@@ -7,4 +7,4 @@ tags:
 
 ![Two Backpacks](/images/two_backpacks.jpg)
 
-{% youtube e-6noWr4f6A %}
+{% youtube 6noWr4f6A %}

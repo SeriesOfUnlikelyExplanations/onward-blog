@@ -4,8 +4,6 @@ This repo holds the source code for my hexo based Blog. Right now, it is just a 
 but I plan to add a backed to support more robust contact me functionaltiy and ability for users to comment.
 
 TODO:
-- Build Image slider plugin
-  https://fancyapps.com/playground/gi
 - move binary files out of git
 - add deployment script that indexes content on google.
 - fix it so you can serve images from draft folder
