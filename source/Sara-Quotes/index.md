@@ -30,3 +30,12 @@ date: 2021-03-25 05:15:26
 13. "I would be very sad if you showed my butt to everyone"
 
 14. "My wiggles are not coming out of my ears, they are coming out of my body"
+
+15. "That sign says you can't bring a gun into the building... But not Glue Guns! Real guns hurt the flowers and plants..."
+
+16. "I stuck my thumb into my bum" - No idea...
+
+17. "You don't eat food in the pool" - Sara "That's right, not a good idea" - Me "Why?" - Sara... She got me.
+
+18. "If you liks someone you tell them. If you don't like someone, then you don't say anything." I don't know where she heard this, but it's amazing advice from a 4 year old.
+
