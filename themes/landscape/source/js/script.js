@@ -138,33 +138,36 @@
 
     $container.removeClass('mobile-nav-on');
   });
-  const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-    Dots: false,
-    on: {
-      createSlide: (carousel, slide) => {
-        slide.Panzoom = new Panzoom(slide.$el.querySelector(".panzoom"), {
-          panOnlyZoomed: true,
-        });
-      },
-      deleteSlide: (carousel, slide) => {
-        if (slide.Panzoom) {
-          slide.Panzoom.destroy();
+  var mainCarousel = document.querySelectorAll("#mainCarousel");
+  var thumbCarousel = document.querySelectorAll("#thumbCarousel");
+  for (var i = 0; i < mainCarousel.length; i++) {
+    const carousel = new Carousel(mainCarousel[i], {
+      Dots: false,
+      on: {
+        createSlide: (carousel, slide) => {
+          slide.Panzoom = new Panzoom(slide.$el.querySelector(".panzoom"), {
+            panOnlyZoomed: true,
+          });
+        },
+        deleteSlide: (carousel, slide) => {
+          if (slide.Panzoom) {
+            slide.Panzoom.destroy();
 
-          slide.Panzoom = null;
-        }
+            slide.Panzoom = null;
+          }
+        },
       },
-    },
-  });
-
-  const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-    Sync: {
-      with: mainCarousel,
-      friction: 0,
-    },
-    Dots: false,
-    Navigation: false,
-    center: true,
-    infinite: false,
-  });
+    });
+     new Carousel(thumbCarousel[i], {
+      Sync: {
+        with: carousel,
+        friction: 0,
+      },
+      Dots: false,
+      Navigation: false,
+      center: true,
+      infinite: false,
+    });
+  }
 
 })(jQuery);
