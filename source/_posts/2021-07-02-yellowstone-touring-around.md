@@ -1,5 +1,5 @@
 ---
-title: yellowstone-touring-around
+title: Yellowstone - Just Touring Around
 tags:
   - VanTrip
 date: 2021-06-23 18:31:21
