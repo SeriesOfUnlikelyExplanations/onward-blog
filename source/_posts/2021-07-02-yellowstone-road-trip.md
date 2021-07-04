@@ -61,20 +61,3 @@ One of the mor fun stops was at a winery called Gilbert Cellars. They had a grea
 %}
 
 ![Back Home!](new_beer_mug.jpg)
-
-And some other Youtube videos to tease the next two posts:
-
-Coyote (or maybe Wolf)
-{% youtube DFNusWjupyY %}
-
-Bison Stampede
-{% youtube 7aMG9ImZPZw %}
-
-Small and Big Geyser
-{% youtube JcglldYp6R4 %}
-
-Sara excited about Geyser
-{% youtube -rMDfAvyOVE %}
-
-Backpacking Trip Report
-{% youtube yYVvnKkIgKE %}

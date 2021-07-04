@@ -22,13 +22,39 @@ hexo.extend.console.register('image', options.desc, options, function(args){
   let images = fs.readdirSync(path.join(this.source_dir, '_posts', postNames[0].replace('.md','')))
     .filter(elm => {return elm.match(/.*\.(jpg|gif|png|bmp)/ig)});
   let post = fs.readFileSync(path.join(this.source_dir, '_posts', postNames[0])).toString()
-   images.forEach(image => {
+  let galleryString = ''
+  post += '\n\n\n'
+  images.forEach(image => {
     if (!post.includes(image)) {
-      console.log(image);
+      let desc = image.replace(/_/g,' ').replace(/-/g,' ')
+        .replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); })
+        .substr(0, image.lastIndexOf("."))
+        .replace(/\d+/g, '')
+      let galleryTest = !isNaN(image.substr(0, image.lastIndexOf(".")).slice(-1))
+      if (galleryTest) {
+        if (!image.includes(galleryString)) {
+          post += '%}\n\n'
+        }
+        if (!galleryString || !image.includes(galleryString)) {
+          galleryString = image.substr(0, image.lastIndexOf("."))
+            .replace(/\d+/g, '')
+          post += `{% gallery "${desc}"\n`
+        }
+        post += `  ${image}\n`
+      } else {
+        if (galleryString) {
+          post += '%}\n\n'
+          galleryString = ''
+        }
+        post += `![${desc}](${image})\n\n`
+      }
     }
   })
-  //~fs.writeFile('output.txt', 'Hello Node', function (err) {
-    //~if (err) throw err;
-    //~console.log('It\'s saved!');
-  //~});
+  if (galleryString) {
+    post += '%}'
+  }
+  fs.writeFile(path.join(this.source_dir, '_posts', postNames[0]), post, function (err) {
+    if (err) throw err;
+    console.log('Done!');
+  });
 });
