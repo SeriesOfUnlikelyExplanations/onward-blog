@@ -187,7 +187,3 @@ Our last night was in Jackson hole to round out the trip. We also found a fun Na
 %}
 
 ![Nps Brew](nps_brew.jpg)
-
-
-Backpacking Trip Report
-{% youtube yYVvnKkIgKE %}
