@@ -10,8 +10,6 @@ import * as ssm from '@aws-cdk/aws-ssm';
 import { AwsCustomResource, PhysicalResourceId, AwsCustomResourcePolicy } from '@aws-cdk/custom-resources';
 import * as config from './config';
 
-const zoneName = 'always-onward.com';
-
 export class OnwardBlogStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);

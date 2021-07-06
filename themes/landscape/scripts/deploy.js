@@ -3,6 +3,8 @@ const AWS = require("aws-sdk");
 const path = require("path");
 const mime = require('mime');
 const { execSync } = require('child_process');
+const config = require('../../../lib/config';
+AWS.config.update({region:config.region});
 
 hexo.extend.deployer.register('cdk', function(args) {
   //deploy cdk first
@@ -37,7 +39,6 @@ hexo.extend.deployer.register('cdk', function(args) {
       }
     });
   }
-
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {
