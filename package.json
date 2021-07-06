@@ -12,7 +12,6 @@
     "hexo-deploy": "hexo deploy",
     "s3-deploy": "aws s3 sync public s3://`jq -r '.OnwardBlogStack.bucketName' output.json`",
     "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
-    "deploy": "npm run hexo-deploy && npm run s3-deploy && npm run invalidate",
     "serve": "hexo generate && hexo server --draft",
     "test": "tsc",
     "publish": "hexo publish"

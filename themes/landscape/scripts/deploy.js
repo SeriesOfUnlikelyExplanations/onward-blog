@@ -5,7 +5,7 @@ var s3 = require('s3');
 var xtend = require('xtend');
 const { execSync  } = require('child_process');
 
-hexo.extend.deployer.register('s3', function(args) {
+hexo.extend.deployer.register('cdk', function(args) {
   //deploy cdk first
   let stdout = execSync('cdk deploy --require-approval never --outputs-file output.json');
   console.log(stdout)
