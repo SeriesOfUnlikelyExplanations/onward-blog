@@ -3,7 +3,7 @@ import { CloudFrontWebDistribution, OriginAccessIdentity, OriginProtocolPolicy }
 import { Bucket, BlockPublicAccess } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import * as lambda from '@aws-cdk/aws-lambda';
-import * as iam = require('@aws-cdk/aws-iam');
+import * as iam from '@aws-cdk/aws-iam';
 import * as route53 from '@aws-cdk/aws-route53';
 import * as targets from '@aws-cdk/aws-route53-targets';
 import * as ssm from '@aws-cdk/aws-ssm';
@@ -93,7 +93,7 @@ export class OnwardBlogStack extends cdk.Stack {
 
     rsrc.node.addDependency(handler.permissionsNode.findChild('AllowS3Invocation'));
 
-    const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, siteName + '-hosted-zone', {
+    const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, config.siteName + '-hosted-zone', {
       config.hostedZoneId,
       config.zoneName,
     });
@@ -106,16 +106,16 @@ export class OnwardBlogStack extends cdk.Stack {
 
     new ssm.StringParameter(this, "bucketName", {
       parameterName: '/OnwardBlog/bucketName',
-      stringValue: sourceBucket.bucketName
+      stringValue: sourceBucket.bucketName,
     });
     new ssm.StringParameter(this, "distID", {
       parameterName: '/OnwardBlog/distID',
-      stringValue: distribution.distributionId
+      stringValue: distribution.distributionId,
     });
 
     new cdk.CfnOutput(this, "distID", {
       exportName: "distID",
-      value: distribution.distributionId
+      value: distribution.distributionId,
     });
     new cdk.CfnOutput(this, "bucketName", {
       exportName: "bucketName",
