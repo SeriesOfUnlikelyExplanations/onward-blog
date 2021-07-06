@@ -28,7 +28,7 @@
     "@aws-cdk/yaml-cfn": "^1.87.0",
     "@types/node": "^10.17.27",
     "aws-cdk": "^1.87.0",
-    "aws-sdk": "^2.841.0",
+    "aws-sdk": "^2.939.0",
     "cdk-assets": "^1.87.0",
     "fs-extra": "^9.1.0",
     "hexo": "^5.4.0",
@@ -46,7 +46,6 @@
     "highlight.js": "^10.6.0",
     "live-server": "^1.1.0",
     "promptly": "^3.2.0",
-    "s3": "^4.0.0",
     "source-map-support": "^0.5.16",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.8"
