@@ -16,7 +16,6 @@ hexo.extend.deployer.register('cdk', async function(args) {
   // get SSM keys
   var ssm = new AWS.SSM();
   var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}).promise();
-  console.log(typeof ssmData);
   //Now deploy the s3 contents
   console.log('Deploying files to S3...')
   const s3= new AWS.S3({
@@ -37,7 +36,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {
-      Bucket: ssmData.find(p => p.Name = args.bucket).Value;,
+      Bucket: ssmData.Parameters.find(p => p.Name = args.bucket).Value,
       Key: bucketPath,
       Body: fs.readFileSync(filePath),
       ContentType: mime.getType(filePath)
@@ -56,7 +55,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   console.log('Starting cloudfront invalidation...')
   var cloudfront = new AWS.CloudFront();
   var params = {
-    DistributionId: ssmData.find(p => p.Name = args.distID).Value;,
+    DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value;,
     InvalidationBatch: {
       CallerReference: new Date(), /* required */
       Paths: { /* required */
