@@ -39,7 +39,7 @@ hexo.extend.deployer.register('cdk', function(args) {
       Bucket: bucketName,
       Key: bucketPath,
       Body: fs.readFileSync(filePath),
-      ContentType: mime.getType(filePath);,
+      ContentType: mime.getType(filePath),
     };
     s3.putObject(params, function(err, data) {
       if (err) {
