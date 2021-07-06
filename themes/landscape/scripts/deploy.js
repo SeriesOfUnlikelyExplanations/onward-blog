@@ -12,10 +12,13 @@ hexo.extend.deployer.register('cdk', function(args) {
 
   //Now deploy the s3 contents
   console.log('Deploying files to S3...')
-  const s3bucket = new AWS.S3({
+  const s3= new AWS.S3({
     accessKeyId: args.aws_key || process.env.AWS_ACCESS_KEY_ID || process.env.AWS_KEY,
     secretAccessKey: args.aws_secret || process.env.AWS_SECRET_ACCESS_KEY || process.env.AWS_SECRET,
   });
+  console.log(this.config.public_dir)
+
+  const bucketName = 'blog.always-onward.com'
 
   function walkSync(currentDirPath, callback) {
     fs.readdirSync(currentDirPath).forEach((name) => {

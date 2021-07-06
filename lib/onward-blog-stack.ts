@@ -116,14 +116,5 @@ export class OnwardBlogStack extends cdk.Stack {
       parameterName: '/OnwardBlog/region',
       stringValue: config.region,
     });
-
-    new cdk.CfnOutput(this, "cfn-distID", {
-      exportName: "distID",
-      value: distribution.distributionId,
-    });
-    new cdk.CfnOutput(this, "cfn-bucketName", {
-      exportName: "bucketName",
-      value: sourceBucket.bucketName
-     });
   }
 }
