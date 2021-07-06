@@ -104,7 +104,7 @@ export class OnwardBlogStack extends cdk.Stack {
     });
 
     //Create a bucket to cache the photos
-    const photosBucket = new Bucket(this, config.siteName + '-website', {
+    const photosBucket = new Bucket(this, config.photosBucket, {
       bucketName: config.photosBucket,
       blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
