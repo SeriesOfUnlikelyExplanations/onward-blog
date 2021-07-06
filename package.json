@@ -9,7 +9,7 @@
   },
   "scripts": {
     "new": "hexo new",
-    "deploy": "hexo deploy",
+    "hexo-deploy": "hexo deploy",
     "serve": "hexo generate && hexo server --draft",
     "test": "tsc",
     "publish": "hexo publish"

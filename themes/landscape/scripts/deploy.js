@@ -22,7 +22,7 @@ hexo.extend.deployer.register('cdk', function(args) {
   var ssmData = ssm.getParameters({Names: [args.bucket, args.distID]}, (err, data) => {
     if (err) console.log(err, err.stack); // an error occurred
     else return data;           // successful response
-  });\
+  });
   console.log(ssmData);
   const bucketName = 'blog.always-onward.com'
 
