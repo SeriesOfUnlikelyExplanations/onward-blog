@@ -5,7 +5,6 @@ but I plan to add a backed to support more robust contact me functionaltiy and a
 
 TODO:
 - move binary files out of git
-- add deployment script that indexes content on google.
 - fix it so you can serve images from draft folder
 - Auto upload videos to youtube on hexo generate
 

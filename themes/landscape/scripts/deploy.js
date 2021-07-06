@@ -34,6 +34,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
       }
     });
   }
+  const promises = [];
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {
@@ -42,15 +43,16 @@ hexo.extend.deployer.register('cdk', async function(args) {
       Body: fs.readFileSync(filePath),
       ContentType: mime.getType(filePath)
     };
-    s3.putObject(params, function(err, data) {
+    promises.push(s3.putObject(params, function(err, data) {
       if (err) {
         console.log(err)
       } else {
         console.log('Successfully uploaded '+ bucketPath +' to ' + params.Bucket);
       }
-    });
+    }).promise());
   });
   console.log('S3 deployment complete.')
+  await Promise.all(promises)
 
   //Kickoff the cloudfront invalidation
   console.log('Starting cloudfront invalidation...')
