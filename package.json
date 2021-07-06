@@ -10,7 +10,6 @@
   "scripts": {
     "new": "hexo new",
     "hexo-deploy": "hexo deploy",
-    "s3-deploy": "aws s3 sync public s3://`jq -r '.OnwardBlogStack.bucketName' output.json`",
     "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
     "serve": "hexo generate && hexo server --draft",
     "test": "tsc",

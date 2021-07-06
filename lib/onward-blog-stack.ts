@@ -112,6 +112,10 @@ export class OnwardBlogStack extends cdk.Stack {
       parameterName: '/OnwardBlog/distID',
       stringValue: distribution.distributionId,
     });
+    new ssm.StringParameter(this, "region", {
+      parameterName: '/OnwardBlog/region',
+      stringValue: config.region,
+    });
 
     new cdk.CfnOutput(this, "cfn-distID", {
       exportName: "distID",
