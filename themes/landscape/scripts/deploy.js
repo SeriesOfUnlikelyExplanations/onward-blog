@@ -37,7 +37,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {
-      Bucket: ssmData.Parameters.find(p => p.Name = args.bucket).Value,
+      Bucket: ssmData.Parameters.find(p => p.Name === args.bucket).Value,
       Key: bucketPath,
       Body: fs.readFileSync(filePath),
       ContentType: mime.getType(filePath)
@@ -54,12 +54,10 @@ hexo.extend.deployer.register('cdk', async function(args) {
 
   //Kickoff the cloudfront invalidation
   console.log('Starting cloudfront invalidation...')
-  console.log(args.distID)
-  console.log(ssmData.Parameters);
-  console.log(ssmData.Parameters.find(p => p.Name = args.distID))
+  console.log(ssmData.Parameters.find(p => p.Name === args.distID))
   var cloudfront = new AWS.CloudFront();
   var params = {
-    DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value,
+    DistributionId: ssmData.Parameters.find(p => p.Name === args.distID).Value,
     InvalidationBatch: {
       CallerReference: new Date().toISOString(), /* required */
       Paths: { /* required */
