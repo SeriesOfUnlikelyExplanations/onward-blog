@@ -40,7 +40,7 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
                 if (file.match(/.(jpg|jpeg|png|gif)$/i)) {
                   results.push({
                     file: file,
-                    key: file.replace(sourceDir,'')
+                    key: file.replace(sourceDir + '/','')
                   });
                 }
                 if (!--pending) done(null, results);
@@ -71,15 +71,15 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
       Body: fs.readFileSync(artifact.file),
       ContentType: mime.getType(artifact.file)
     };
-    console.log(params);
     promises.push(s3.putObject(params, function(err, data) {
       if (err) {
         console.log(err)
       } else {
-        console.log('Successfully uploaded '+ bucketPath +' to ' + params.Bucket);
+        console.log('Successfully uploaded '+ artifact.key +' to ' + params.Bucket);
       }
     }).promise());
   });
+  await Promise.all(promises)
   // first push any local changes to main branch
   console.log('Pushing local changes to main (if any)...')
   try {
