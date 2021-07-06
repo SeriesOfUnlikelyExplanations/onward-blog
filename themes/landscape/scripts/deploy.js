@@ -18,7 +18,7 @@ hexo.extend.deployer.register('cdk', function(args) {
   });
 
   function walkSync(currentDirPath, callback) {
-    fs.readdirSync(currentDirPath).forEach(function (name) {
+    fs.readdirSync(currentDirPath).forEach((name) => {
       var filePath = path.join(currentDirPath, name);
       var stat = fs.statSync(filePath);
       if (stat.isFile()) {
@@ -29,7 +29,7 @@ hexo.extend.deployer.register('cdk', function(args) {
     });
   }
 
-  walkSync(this.config.public_dir, function(filePath, stat) {
+  walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {Bucket: bucketName, Key: bucketPath, Body: fs.readFileSync(filePath) };
     s3.putObject(params, function(err, data) {
