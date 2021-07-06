@@ -111,10 +111,9 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: cdk
-  bucket:
+  bucket: /OnwardBlog/bucketName
   concurrency: <number of connections> // Optional
   region: <region>  // Optional, see https://github.com/LearnBoost/knox#region
-  prefix: <prefix> // Optional, prefix ending in /
 
 
 feed:
