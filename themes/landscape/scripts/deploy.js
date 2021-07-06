@@ -54,7 +54,9 @@ hexo.extend.deployer.register('cdk', async function(args) {
 
   //Kickoff the cloudfront invalidation
   console.log('Starting cloudfront invalidation...')
-  console.log(ssmData.Parameters.find(p => p.Name = args.distID).Value)
+  console.log(args.distID)
+  console.log(ssmData.Parameters);
+  console.log(ssmData.Parameters.find(p => p.Name = args.distID))
   var cloudfront = new AWS.CloudFront();
   var params = {
     DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value,
