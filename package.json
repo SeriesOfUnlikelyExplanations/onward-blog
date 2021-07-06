@@ -12,7 +12,7 @@
     "hexo-deploy": "hexo deploy",
     "serve": "hexo generate && hexo server --draft",
     "test": "tsc",
-    "publish": "hexo publish"
+    "deploy": "hexo upload"
   },
   "hexo": {
     "version": "5.4.0"
