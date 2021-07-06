@@ -94,8 +94,8 @@ export class OnwardBlogStack extends cdk.Stack {
     rsrc.node.addDependency(handler.permissionsNode.findChild('AllowS3Invocation'));
 
     const myHostedZone = route53.HostedZone.fromHostedZoneAttributes(this, config.siteName + '-hosted-zone', {
-      config.hostedZoneId,
-      config.zoneName,
+      hostedZoneId: config.hostedZoneId,
+      zoneName: config.zoneName,
     });
 
     const aliasRecord = new route53.ARecord(this, config.siteName + '-alias-record', {
