@@ -113,11 +113,11 @@ export class OnwardBlogStack extends cdk.Stack {
       stringValue: distribution.distributionId,
     });
 
-    new cdk.CfnOutput(this, "distID", {
+    new cdk.CfnOutput(this, "cfn-distID", {
       exportName: "distID",
       value: distribution.distributionId,
     });
-    new cdk.CfnOutput(this, "bucketName", {
+    new cdk.CfnOutput(this, "cfn-bucketName", {
       exportName: "bucketName",
       value: sourceBucket.bucketName
      });
