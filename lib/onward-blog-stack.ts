@@ -117,7 +117,7 @@ export class OnwardBlogStack extends cdk.Stack {
           photosBucket.bucketArn,
         ],
         actions: ["s3:DeleteObject"],
-        principals: [new iam.ServicePrincipal('*')],
+        principals: [new iam.AnyPrincipal()],
       })
     );
     new ssm.StringParameter(this, "websiteBucket", {
