@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 const config = require('../../../lib/config');
 AWS.config.update({region:config.region});
 
-hexo.extend.deployer.register('cdk', function(args) {
+hexo.extend.deployer.register('cdk', async (args) => {
   //deploy cdk first
   console.log('Deploying CDK...')
   let stdout = execSync('cdk deploy --require-approval never --outputs-file output.json');
@@ -21,9 +21,9 @@ hexo.extend.deployer.register('cdk', function(args) {
   });
 
   var ssm = new AWS.SSM();
-  var ssmData = ssm.getParameters({Names: [args.bucket, args.distID]}, (err, data) => {
+  var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}, (err, data) => {
     if (err) console.log(err, err.stack); // an error occurred
-    else return data;           // successful response
+    else return data.Parameters;           // successful response
   });
   console.log(ssmData);
   const bucketName = 'blog.always-onward.com'
