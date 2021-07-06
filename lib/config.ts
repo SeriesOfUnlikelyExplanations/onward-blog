@@ -7,4 +7,5 @@ export var region = 'us-west-2'
 export var photosBucket = 'onward-photos'
 export var websiteBucketKey = '/OnwardBlog/bucketName'
 export var websiteDistID = '/OnwardBlog/distID'
+export var photosKey = '/OnwardBlog/photosBucket'
 

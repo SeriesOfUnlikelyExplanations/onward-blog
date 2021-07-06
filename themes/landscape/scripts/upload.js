@@ -26,7 +26,7 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
                   if (!--pending) done(null, results);
                 });
               } else {
-                results.push(file);
+                if (file.match(/.(jpg|jpeg|png|gif)$/i)) results.push(file);
                 if (!--pending) done(null, results);
               }
             });
@@ -45,7 +45,11 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
 
   // first push any local changes to main branch
   console.log('Pushing local changes to main (if any)...')
-  execSync("git commit -a -m 'deploy push' && git push");
+  try {
+    execSync("git commit -a -m 'deploy push' && git push");
+  } catch {
+    console.log("Already up to date");
+  }
   console.log('Local changes pushed.')
 
   // then sync the main branch to the live branch - which will trigger the github workflow

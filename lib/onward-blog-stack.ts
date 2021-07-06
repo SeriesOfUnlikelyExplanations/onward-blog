@@ -121,15 +121,15 @@ export class OnwardBlogStack extends cdk.Stack {
       })
     );
     new ssm.StringParameter(this, "websiteBucket", {
-      parameterName: '/OnwardBlog/websiteBucket',
+      parameterName: config.websiteBucketKey,
       stringValue: sourceBucket.bucketName,
     });
     new ssm.StringParameter(this, "distID", {
-      parameterName: '/OnwardBlog/distID',
+      parameterName: config.websiteDistID,
       stringValue: distribution.distributionId,
     });
     new ssm.StringParameter(this, "photosBucket", {
-      parameterName: '/OnwardBlog/photosBucket',
+      parameterName: config.photosKey,
       stringValue: photosBucket.bucketName,
     });
   }
