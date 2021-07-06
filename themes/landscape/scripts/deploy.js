@@ -58,7 +58,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   var params = {
     DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value,
     InvalidationBatch: {
-      CallerReference: new Date(), /* required */
+      CallerReference: new Date().toISOString(), /* required */
       Paths: { /* required */
         Quantity: '1', /* required */
         Items: [
