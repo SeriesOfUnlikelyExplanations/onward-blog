@@ -9,8 +9,8 @@ var options = {
 }
 
 hexo.extend.console.register('upload', options.desc, options, async function(args){
-  function walkSync(dir) {
-    return new Promise(function(resolve, reject) {
+  function walkSync(sourceDir) {
+    return new Promise((resolve, reject) => {
       var walk = (dir, done) => {
         var results = [];
         fs.readdir(dir, (err, list) => {
@@ -26,14 +26,14 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
                   if (!--pending) done(null, results);
                 });
               } else {
-                if (file.match(/.(jpg|jpeg|png|gif)$/i)) results.push(file.replace(dir,''));
+                if (file.match(/.(jpg|jpeg|png|gif)$/i)) results.push(file.replace(sourceDir,''));
                 if (!--pending) done(null, results);
               }
             });
           });
         });
       };
-      walk(dir, (err, data) => {
+      walk(sourceDir, (err, data) => {
         if (err !== null) reject(err);
         else resolve(data);
       });
