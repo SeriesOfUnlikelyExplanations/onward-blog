@@ -5,6 +5,9 @@ db.json
 node_modules/
 public/
 .deploy*/
+lib/*.js
+bin/*.js
+*.d.ts
 
 # CDK asset staging directory
 .cdk.staging

@@ -187,7 +187,3 @@ We saw a mule train coming down the hill on the last half mile of the trail. The
 All and all, it was an amazing trip. Some lessons learned were to always bring my zip off pants instead of just shorts (for bug protection) and some camp shoes that cover your feet (instead of Sandals) would have been nice. Also room for improvement on the route planning front on day 3. We also had really bad headaches on day 3 - I think both of us were un-used to how much water you need to drink in this dry climate and were a bit dehydrated. We drank a lot in the evening and felt better on day 4.
 
 ![Final Glance back at the route we just hiked](final_glance.jpg)
-
-
-
-
