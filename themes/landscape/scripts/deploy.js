@@ -23,7 +23,8 @@ hexo.extend.deployer.register('cdk', async function(args) {
   var ssm = new AWS.SSM();
   var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}).promise();
   console.log(ssmData);
-  const bucketName = 'blog.always-onward.com'
+
+  const bucketName = ssmData.find(p => p.Name = args.bucket).Value;
 
   function walkSync(currentDirPath, callback) {
     fs.readdirSync(currentDirPath).forEach((name) => {
