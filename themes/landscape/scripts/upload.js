@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 var fs = require('fs');
 var path = require('path');
+const AWS = require("aws-sdk");
 
 var options = {
   usage: 'None',
@@ -26,7 +27,12 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
                   if (!--pending) done(null, results);
                 });
               } else {
-                if (file.match(/.(jpg|jpeg|png|gif)$/i)) results.push(file.replace(sourceDir,''));
+                if (file.match(/.(jpg|jpeg|png|gif)$/i)) {
+                  results.push({
+                    file: file,
+                    key: file.replace(sourceDir,'')
+                  });
+                }
                 if (!--pending) done(null, results);
               }
             });
@@ -41,6 +47,11 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
   }
 
   var results = await walkSync(path.join(this.source_dir, '_posts'))
+  const s3 = new AWS.S3({
+    accessKeyId: args.aws_key || process.env.AWS_ACCESS_KEY_ID || process.env.AWS_KEY,
+    secretAccessKey: args.aws_secret || process.env.AWS_SECRET_ACCESS_KEY || process.env.AWS_SECRET,
+  });
+
   console.log(results)
 
   // first push any local changes to main branch
