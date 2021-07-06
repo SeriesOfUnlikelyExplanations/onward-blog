@@ -1,7 +1,11 @@
 const { execSync } = require('child_process');
 var fs = require('fs');
 var path = require('path');
+const mime = require('mime');
 const AWS = require("aws-sdk");
+execSync('tsc');
+const config = require('../../../lib/config');
+AWS.config.update({region:config.region});
 
 var options = {
   usage: 'None',
@@ -10,6 +14,12 @@ var options = {
 }
 
 hexo.extend.console.register('upload', options.desc, options, async function(args){
+  // get SSM keys
+  var ssm = new AWS.SSM();
+  console.log(config.photosKey)
+  var ssmData = await ssm.getParameters({Names: [config.photosKey]}).promise();
+
+  //find image files for upload
   function walkSync(sourceDir) {
     return new Promise((resolve, reject) => {
       var walk = (dir, done) => {
@@ -45,15 +55,31 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
       });
     });
   }
-
   var results = await walkSync(path.join(this.source_dir, '_posts'))
+  console.log(results)
+
+  //upload the images
   const s3 = new AWS.S3({
     accessKeyId: args.aws_key || process.env.AWS_ACCESS_KEY_ID || process.env.AWS_KEY,
     secretAccessKey: args.aws_secret || process.env.AWS_SECRET_ACCESS_KEY || process.env.AWS_SECRET,
   });
-
-  console.log(results)
-
+  const promises = [];
+  results.forEach((artifact) => {
+    let params = {
+      Bucket: ssmData.Parameters.find(p => p.Name === config.photosKey).Value,
+      Key: artifact.key,
+      Body: fs.readFileSync(artifact.file),
+      ContentType: mime.getType(artifact.file)
+    };
+    console.log(params);
+    promises.push(s3.putObject(params, function(err, data) {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log('Successfully uploaded '+ bucketPath +' to ' + params.Bucket);
+      }
+    }).promise());
+  });
   // first push any local changes to main branch
   console.log('Pushing local changes to main (if any)...')
   try {
