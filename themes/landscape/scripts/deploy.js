@@ -3,7 +3,7 @@ const AWS = require("aws-sdk");
 const path = require("path");
 const mime = require('mime');
 const { execSync } = require('child_process');
-const config = require('../../../lib/config';
+const config = require('../../../lib/config');
 AWS.config.update({region:config.region});
 
 hexo.extend.deployer.register('cdk', function(args) {
