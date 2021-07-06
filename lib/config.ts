@@ -4,4 +4,5 @@ export var hostedZoneId = 'Z0092175EW0ABPS51GQB';
 export var siteName = 'blog.always-onward.com';
 export var zoneName = 'always-onward.com';
 export var region = 'us-west-2'
+export var photosBucket = 'onwardPhotos'
 

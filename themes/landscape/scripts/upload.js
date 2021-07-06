@@ -7,6 +7,8 @@ var options = {
 }
 
 hexo.extend.console.register('upload', options.desc, options, function(args){
+
+
   // first push any local changes to main branch
   console.log('Pushing local changes to main (if any)...')
   execSync("git commit -a -m 'deploy push' && git push");

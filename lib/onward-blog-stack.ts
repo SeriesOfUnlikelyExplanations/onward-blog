@@ -18,6 +18,7 @@ export class OnwardBlogStack extends cdk.Stack {
       websiteIndexDocument: 'index.html',
       bucketName: config.siteName,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
+      autoDeleteObjects: true,
       publicReadAccess: true,
     });
     //Create the cloudfront distribution to cache the bucket
@@ -102,6 +103,23 @@ export class OnwardBlogStack extends cdk.Stack {
       recordName: config.siteName,
     });
 
+    //Create a bucket to cache the photos
+    const photosBucket = new Bucket(this, config.siteName + '-website', {
+      bucketName: config.photosBucket,
+      blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+    });
+    photosBucket.addToResourcePolicy(
+      new iam.PolicyStatement({
+        effect: iam.Effect.DENY,
+        resources: [
+          photosBucket.arnForObjects("*"),
+          photosBucket.bucketArn,
+        ],
+        actions: ["s3:DeleteObject"],
+        principals: [new iam.ServicePrincipal('*')],
+      })
+    );
     new ssm.StringParameter(this, "bucketName", {
       parameterName: '/OnwardBlog/bucketName',
       stringValue: sourceBucket.bucketName,
