@@ -120,17 +120,17 @@ export class OnwardBlogStack extends cdk.Stack {
         principals: [new iam.ServicePrincipal('*')],
       })
     );
-    new ssm.StringParameter(this, "bucketName", {
-      parameterName: '/OnwardBlog/bucketName',
+    new ssm.StringParameter(this, "websiteBucket", {
+      parameterName: '/OnwardBlog/websiteBucket',
       stringValue: sourceBucket.bucketName,
     });
     new ssm.StringParameter(this, "distID", {
       parameterName: '/OnwardBlog/distID',
       stringValue: distribution.distributionId,
     });
-    new ssm.StringParameter(this, "region", {
-      parameterName: '/OnwardBlog/region',
-      stringValue: config.region,
+    new ssm.StringParameter(this, "photosBucket", {
+      parameterName: '/OnwardBlog/photosBucket',
+      stringValue: photosBucket.bucketName,
     });
   }
 }

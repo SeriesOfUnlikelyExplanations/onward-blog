@@ -111,8 +111,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: cdk
-  bucket: /OnwardBlog/bucketName
-  distID: /OnwardBlog/distID
 
 feed:
   enable: true

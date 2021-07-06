@@ -5,4 +5,6 @@ export var siteName = 'blog.always-onward.com';
 export var zoneName = 'always-onward.com';
 export var region = 'us-west-2'
 export var photosBucket = 'onward-photos'
+export var websiteBucketKey = '/OnwardBlog/bucketName'
+export var websiteDistID = '/OnwardBlog/distID'
 
