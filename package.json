@@ -9,8 +9,7 @@
   },
   "scripts": {
     "new": "hexo new",
-    "hexo-deploy": "hexo deploy",
-    "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
+    "deploy": "hexo deploy",
     "serve": "hexo generate && hexo server --draft",
     "test": "tsc",
     "publish": "hexo publish"

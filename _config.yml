@@ -112,7 +112,7 @@ theme: landscape
 deploy:
   type: cdk
   bucket: /OnwardBlog/bucketName
-  region: /OnwardBlog/region
+  distID: /OnwardBlog/distID
 
 feed:
   enable: true
