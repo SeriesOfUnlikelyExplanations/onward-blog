@@ -1,5 +1,6 @@
 const fs = require("fs");
 const AWS = require("aws-sdk");
+const path = require("path");
 const { execSync } = require('child_process');
 
 hexo.extend.deployer.register('cdk', function(args) {
