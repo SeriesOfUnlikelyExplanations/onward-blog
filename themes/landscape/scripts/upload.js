@@ -42,10 +42,12 @@ hexo.extend.console.register('upload', options.desc, options, async function(arg
 
   var results = await walkSync(path.join(this.source_dir, '_posts'))
   console.log(results)
+
   // first push any local changes to main branch
   console.log('Pushing local changes to main (if any)...')
   execSync("git commit -a -m 'deploy push' && git push");
   console.log('Local changes pushed.')
+
   // then sync the main branch to the live branch - which will trigger the github workflow
   console.log('Pushing Main to Live...')
   execSync("git push origin main:live")
