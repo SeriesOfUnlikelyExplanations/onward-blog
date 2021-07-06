@@ -51,8 +51,8 @@ hexo.extend.deployer.register('cdk', async function(args) {
       }
     }).promise());
   });
-  console.log('S3 deployment complete.')
   await Promise.all(promises)
+  console.log('S3 deployment complete.')
 
   //Kickoff the cloudfront invalidation
   console.log('Starting cloudfront invalidation...')

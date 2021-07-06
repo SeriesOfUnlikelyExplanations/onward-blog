@@ -11,17 +11,17 @@ var options = {
 hexo.extend.console.register('upload', options.desc, options, async function(args){
   function walkSync(dir) {
     return new Promise(function(resolve, reject) {
-      var walk = function(dir, done) {
+      var walk = (dir, done) => {
         var results = [];
-        fs.readdir(dir, function(err, list) {
+        fs.readdir(dir, (err, list) => {
           if (err) return done(err);
           var pending = list.length;
           if (!pending) return done(null, results);
-          list.forEach(function(file) {
+          list.forEach((file) => {
             file = path.resolve(dir, file);
-            fs.stat(file, function(err, stat) {
+            fs.stat(file, (err, stat) => {
               if (stat && stat.isDirectory()) {
-                walk(file, function(err, res) {
+                walk(file, (err, res) => {
                   results = results.concat(res);
                   if (!--pending) done(null, results);
                 });
