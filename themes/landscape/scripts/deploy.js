@@ -1,6 +1,7 @@
 const fs = require("fs");
 const AWS = require("aws-sdk");
 const path = require("path");
+const mime = require('mime');
 const { execSync } = require('child_process');
 
 hexo.extend.deployer.register('cdk', function(args) {
@@ -34,7 +35,12 @@ hexo.extend.deployer.register('cdk', function(args) {
 
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
-    let params = {Bucket: bucketName, Key: bucketPath, Body: fs.readFileSync(filePath) };
+    let params = {
+      Bucket: bucketName,
+      Key: bucketPath,
+      Body: fs.readFileSync(filePath),
+      ContentType: mime.getType(filePath);,
+    };
     s3.putObject(params, function(err, data) {
       if (err) {
         console.log(err)
