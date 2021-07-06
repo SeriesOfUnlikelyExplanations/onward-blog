@@ -1,8 +1,7 @@
-var fs = require('fs');
-var ini = require('ini');
-var path = require('path');
-var s3 = require('s3');
-var xtend = require('xtend');
+//~ var fs = require('fs');
+//~ var ini = require('ini');
+//~ var path = require('path');
+const s3 = require('s3');
 const { execSync  } = require('child_process');
 
 hexo.extend.deployer.register('cdk', function(args) {
