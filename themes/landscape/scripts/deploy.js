@@ -31,7 +31,7 @@ hexo.extend.deployer.register('cdk', function(args) {
 
    var client = s3.createClient(config);
    if (!args.bucket || !config.s3Options.accessKeyId || !config.s3Options.secretAccessKey) {
-     console.log('You are missing one or more required parameters.);
+     console.log('You are missing one or more required parameters.');
      return;
    }
 
