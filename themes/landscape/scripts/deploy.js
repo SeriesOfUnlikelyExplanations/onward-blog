@@ -16,6 +16,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   // get SSM keys
   var ssm = new AWS.SSM();
   var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}).promise();
+
   //Now deploy the s3 contents
   console.log('Deploying files to S3...')
   const s3= new AWS.S3({
@@ -55,7 +56,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   console.log('Starting cloudfront invalidation...')
   var cloudfront = new AWS.CloudFront();
   var params = {
-    DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value;,
+    DistributionId: ssmData.Parameters.find(p => p.Name = args.distID).Value,
     InvalidationBatch: {
       CallerReference: new Date(), /* required */
       Paths: { /* required */
@@ -70,6 +71,5 @@ hexo.extend.deployer.register('cdk', async function(args) {
     if (err) console.log(err, err.stack); // an error occurred
     else     console.log(data);           // successful response
   });
-  //~ "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
   return
 });
