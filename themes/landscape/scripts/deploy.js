@@ -13,19 +13,16 @@ hexo.extend.deployer.register('cdk', async function(args) {
   console.log(stdout)
   console.log('CDK deployment complete.')
 
+  // get SSM keys
+  var ssm = new AWS.SSM();
+  var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}).promise();
+  console.log(typeof ssmData);
   //Now deploy the s3 contents
   console.log('Deploying files to S3...')
   const s3= new AWS.S3({
     accessKeyId: args.aws_key || process.env.AWS_ACCESS_KEY_ID || process.env.AWS_KEY,
     secretAccessKey: args.aws_secret || process.env.AWS_SECRET_ACCESS_KEY || process.env.AWS_SECRET,
   });
-
-  var ssm = new AWS.SSM();
-  var ssmData = await ssm.getParameters({Names: [args.bucket, args.distID]}).promise();
-  console.log(ssmData);
-
-  const bucketName = ssmData.find(p => p.Name = args.bucket).Value;
-
   function walkSync(currentDirPath, callback) {
     fs.readdirSync(currentDirPath).forEach((name) => {
       var filePath = path.join(currentDirPath, name);
@@ -40,7 +37,7 @@ hexo.extend.deployer.register('cdk', async function(args) {
   walkSync(this.config.public_dir, (filePath, stat) => {
     let bucketPath = filePath.substring(this.config.public_dir.length+1);
     let params = {
-      Bucket: bucketName,
+      Bucket: ssmData.find(p => p.Name = args.bucket).Value;,
       Key: bucketPath,
       Body: fs.readFileSync(filePath),
       ContentType: mime.getType(filePath)
@@ -49,14 +46,31 @@ hexo.extend.deployer.register('cdk', async function(args) {
       if (err) {
         console.log(err)
       } else {
-        console.log('Successfully uploaded '+ bucketPath +' to ' + bucketName);
+        console.log('Successfully uploaded '+ bucketPath +' to ' + params.Bucket);
       }
     });
   });
   console.log('S3 deployment complete.')
+
+  //Kickoff the cloudfront invalidation
   console.log('Starting cloudfront invalidation...')
   var cloudfront = new AWS.CloudFront();
-
+  var params = {
+    DistributionId: ssmData.find(p => p.Name = args.distID).Value;,
+    InvalidationBatch: {
+      CallerReference: new Date(), /* required */
+      Paths: { /* required */
+        Quantity: '1', /* required */
+        Items: [
+          '/*'
+        ]
+      }
+    }
+  };
+  cloudfront.createInvalidation(params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else     console.log(data);           // successful response
+  });
   //~ "invalidate": "aws cloudfront create-invalidation --distribution-id `jq -r '.OnwardBlogStack.distID' output.json` --paths '/*'",
   return
 });
