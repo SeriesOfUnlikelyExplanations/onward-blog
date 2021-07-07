@@ -95,10 +95,14 @@
 
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
-      $(this).wrap(`<a href="${this.src}" rel="alt" data-fancybox="iframe" data-caption="${alt} + '"></a>`)
+      $(this).wrap(`<a href="${this.src}" rel="alt" data-fancybox="iframe" data-caption="${alt}"></a>`)
 
       var dotIndex = this.src.lastIndexOf("/");
-      if (dotIndex != -1) this.src = this.src.substring(0, dotIndex+1) + 'small_' + this.src.substring(dotIndex+1)
+      if (dotIndex != -1) {
+        this.src = this.src.substring(0, dotIndex+1) + 'small_' + this.src.substring(dotIndex+1)
+      } else {
+        this.src = 'small_' + this.src
+      }
     });
 
     $(this).find('.fancybox').each(function(){
