@@ -26,6 +26,7 @@
     "@aws-cdk/core": "^1.87.0",
     "@aws-cdk/yaml-cfn": "^1.87.0",
     "@types/node": "^10.17.27",
+    "async": "^3.2.0",
     "aws-cdk": "^1.87.0",
     "aws-sdk": "^2.939.0",
     "cdk-assets": "^1.87.0",

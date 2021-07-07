@@ -4,7 +4,6 @@ This repo holds the source code for my hexo based Blog. Right now, it is just a 
 but I plan to add a backed to support more robust contact me functionaltiy and ability for users to comment.
 
 TODO:
-- move binary files out of git
 - fix it so you can serve images from draft folder
 - Auto upload videos to youtube on hexo generate
 
