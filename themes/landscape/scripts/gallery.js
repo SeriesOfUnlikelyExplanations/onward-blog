@@ -19,9 +19,12 @@ hexo.extend.tag.register('gallery', function(args, content){
       var tinyurl = 'tiny_' + arg
       var smallurl = 'small_' + arg
     }
-
-    mainHtml += `<div class="carousel__slide"><div class="panzoom"><img class="panzoom__content" src="${smallurl}" /></div></div>`
-    thumbHtml += `<div class="carousel__slide"><img class="panzoom__content" src="${tinyurl}" /></div>`
+    //~ if (this.layout === 'page') {
+      //~ var tinyurl = this.path + tinyurl
+      //~ var smallurl = this.path + smallurl
+    //~ }
+    mainHtml += `<div class="carousel__slide"><div class="panzoom"><img class="panzoom__content" src="${this.permalink+smallurl}" /></div></div>`
+    thumbHtml += `<div class="carousel__slide"><img class="panzoom__content" src="${this.permalink+tinyurl}" /></div>`
   }
   mainHtml += '</div>'
   thumbHtml += '</div>'
