@@ -91,7 +91,6 @@ hexo.extend.console.register('s3Sync', options.desc, options, async function(arg
         })
       } else {
         console.log('Processing: '+ header.name);
-        inputStream.on('warn', (e) => {console.log(e)})
         inputStream.pipe(fs.createWriteStream(path.join(this.source_dir, '_posts', header.name)));
         inputStream.on('finish', () => {
           console.log('Finished processing '+header.name)
